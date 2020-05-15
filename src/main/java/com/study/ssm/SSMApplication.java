@@ -4,11 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SsmApplication {
+public class SSMApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(SsmApplication.class, args);
+        SpringApplication.run(SSMApplication.class, args);
     }
 
 }
