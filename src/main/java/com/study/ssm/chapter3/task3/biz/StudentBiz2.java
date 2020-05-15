@@ -14,4 +14,6 @@ public class StudentBiz2 implements IStudentBiz {
     public void setStudentDao(IStudentDao studentDao){
         this.studentDao = studentDao;
     }
+
+    public String getCity(){return "武汉市";}
 }
