@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+    <!-- SessionFactory 创建session工厂-->
+    <bean id="studentDao" class="com.study.ssm.chapter3.task3.dao.StudentDao"/>
+
+
+    <bean id="studentBiz" class="com.study.ssm.chapter3.task3.biz.StudentBiz">
+        <property name="studentDao" ref="studentDao"/>
+    </bean>
+
+    <bean id="studentBiz2" class="com.study.ssm.chapter3.task3.biz.StudentBiz2">
+        <property name="studentDao" ref="studentDao"/>
+    </bean>
+
+    <bean id="studentAction" class="com.study.ssm.chapter3.task3.action.StudentAction">
+        <property name="studentBiz" ref="studentBiz2"/>
+    </bean>
+</beans>
